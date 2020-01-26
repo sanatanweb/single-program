@@ -1,0 +1,55 @@
+<html>
+<head>
+    <title>Google Translation</title>
+</head>
+<body>
+    <!-- Code By google translate open-->
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({ 
+                pageLanguage: 'en', 
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE, 
+                autoDisplay: false 
+                }, 'google_translate_element');
+            }
+    </script>
+    <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+        type="text/javascript">
+    </script>
+    <!-- Code by google translate close -->
+    <!-- jquery CDN -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <ul>
+            <li>
+                <a href="javascript:;" id="English" onclick="translateLanguage(this.id);">
+                    <span>English</span>
+                </a> 
+            </li>
+            <li>
+                <a href="javascript:;" id="Arabic" onclick="translateLanguage(this.id);">
+                    <span>Arabic</span>
+                </a>
+            </li>
+        </ul>
+    <div>
+        In this article we explain how to translate the web page into different language
+        using google translator. We create a custom country list with flag and call the
+        google translator code using javascript custom code. The benifit of this custom
+        list is than we can hide the google translator widget and use all the language to
+        translate the web page.
+    </div>
+    <!-- Language Translate Script -->
+    <script>
+        function translateLanguage(lang){
+            var $frame = $('.goog-te-menu-frame:first');
+            if (!$frame.size()) {
+                alert("Error: Could not find Google translate frame.");
+                return false;
+            }
+            $frame.contents().find('.goog-te-menu2-item span.text:contains(' + lang + ')').get(0).click();
+            return false;
+        }
+    </script>
+</body>
+</html>
