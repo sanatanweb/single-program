@@ -1,0 +1,49 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="google-translate.css" rel="stylesheet">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="ct-topbar">
+		<div class="container">
+			<ul class="list-unstyled list-inline ct-topbar__list">
+				<li class="ct-language">Language <i class="fa fa-arrow-down"></i>
+			  		<ul class="list-unstyled ct-language__dropdown">
+						<li><a href="javascript:;" class="lang-en lang-select" data-lang='#googtrans(en|en)'>English</a></li>
+						<li><a href="javascript:;" class="lang-es lang-select" data-lang='#googtrans(en|fr)'>French</a></li>
+						<li><a href="javascript:;" class="lang-es lang-select" data-lang='#googtrans(en|zh-CN)'>Chinese</a></li>
+						<li><a href="javascript:;" class="lang-es lang-select" data-lang='#googtrans(en|ja)'>Japanese</a></li>
+						<li><a href="javascript:;" class="lang-es lang-select" data-lang='#googtrans(en|ar)'>Arabic</a></li>
+						<li><a href="javascript:;" class="lang-es lang-select" data-lang='#googtrans(en|ne)'>Nepali</a></li>
+			  		</ul>
+				</li>
+		  	</ul>
+		</div>
+	</div>
+	<div class="container">
+		<h1>Use Google Translate with your Website</h1>
+		<p>Select a language from the upper-right dropdown menu and watch as the content of the page automatically translates.</p>
+		<hr/>
+		<p>Fully optimized for the Amazon Web Services (AWS) Cloud, Solodev provides you with unparalleled scalability, security, and accessibility and total design freedom without the need to compromise on design and functionality.</p>
+		<p>Trusted by nationally recognized brands, Solodev is used to build and host engaging websites that drive meaningful results. Available for instant online purchase, Solodev empowers designers and developers to create dynamic, award-winning websites without compromise.</p>
+	</div>
+	<!-- Language Translate Script -->
+	<script type="text/javascript">
+		function googleTranslateElementInit(){
+			new google.translate.TranslateElement({
+					pageLanguage: 'en',
+					layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT
+				},'google_translate_element');
+		}
+	
+		$('.lang-select').click(function(){
+			window.location = $(this).data('lang');
+		  	location.reload();
+		});
+	</script>
+	<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
